@@ -14,5 +14,12 @@ class Patient
 
   def new_appointment(doctor, date)
     new_appointment = Appointment.new(date, self, doctor)
-  
+  end
+
+  def appointments
+    Appointments.all.select do |appointment|
+      appointment.patient == self
+    end
+  end
+
 end
