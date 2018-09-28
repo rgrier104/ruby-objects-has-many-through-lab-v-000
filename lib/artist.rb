@@ -20,7 +20,7 @@ class Artist
 
   def genre(name,genre)
     Song.new(name,self,genre)
-  end 
+  end
 
 
 end
